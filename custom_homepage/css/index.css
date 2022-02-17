@@ -1,0 +1,58 @@
+body {
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 75vw;
+  height: 100vh;
+  margin: 0 auto;
+  border-width: 0 12.5vw 0 12.5vw;
+  border-color: #111;
+  border-style: solid;
+}
+
+body :first-child {
+  height: 100%;
+  margin: 0 0;
+  margin-bottom: -100%;
+  width: 100%;
+  gap: 0vw 2.5vw;
+  display: flex;
+  flex-direction: row;
+}
+
+body :first-child a {
+  border-style: solid;
+  border-radius: 50%;
+  border-width: clamp(0.625vw, 100vw, 0.625vh);
+  border-color: #333;
+  background-color: #444;
+  height: clamp(5vw, 100vw, 5vh);
+  width: clamp(5vw, 100vw, 5vh);
+  transform: translate(12.5%, 12.5%);
+  transition-duration: 0.25s;
+}
+
+body :first-child a img {
+  position: absolute;
+  margin: 0% -25%;
+  max-width: clamp(4.125vw, 100vw, 4.125vh);
+  max-height: clamp(4.125vw, 100vw, 4.125vh);
+  transition-duration: 0.25s;
+  transform: translate(37.5%, 0%);
+  user-select: none;
+}
+
+body :first-child a img:hover {
+  transform: translate(37.5%, 0%) rotateZ(360deg);
+}
+
+body :first-child a:hover {
+  background-color: #505050;
+  transform: scale(1.25, 1.25) translate(12.5%, 12.5%);
+}
+
+body a:focus {
+  background-color: red;
+}
+/*# sourceMappingURL=index.css.map */

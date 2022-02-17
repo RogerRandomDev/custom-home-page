@@ -1,0 +1,57 @@
+$backgroundcolor:#222;
+$bordercolor:#333;
+$bordercolordark:#111;
+$itemcolor:#444;
+$itemcolorhover:#505050;
+body{
+    background-color: $backgroundcolor;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 75vw;
+    height: 100vh;
+    margin:0 auto;
+    border-width: 0 12.5vw 0 12.5vw;
+    border-color: $bordercolordark;
+    border-style: solid;
+    :first-child{
+        height: 100%;
+        margin:0 0;
+        margin-bottom: -100%;
+        width: 100%;
+        gap: 0vw 2.5vw;
+        display: flex;
+        
+        flex-direction: row;
+        a{
+            border-style: solid;
+            border-radius: 50%;
+            border-width: clamp(0.625vw,100vw,0.625vh);
+            border-color: $bordercolor;
+            background-color:$itemcolor;
+            height: clamp(5vw,100vw,5vh);
+            width: clamp(5vw,100vw,5vh);
+            transform:translate(12.5%,12.5%);
+            transition-duration: 0.25s;
+            img{
+                position:absolute;
+                margin: 0% -25%;
+                
+                max-width: clamp(4.125vw,100vw,4.125vh);
+                max-height: clamp(4.125vw,100vw,4.125vh);
+                transition-duration: 0.25s;
+                transform:translate(37.5%, 0%);
+                user-select: none;
+            }
+            img:hover{
+                transform:translate(37.5%, 0%) rotateZ(360deg);
+            }
+        }
+        a:hover{
+            background-color: $itemcolorhover;
+            transform: scale(1.25,1.25) translate(12.5%,12.5%);
+        }}
+        a:focus{
+            background-color: red;
+        }
+}
